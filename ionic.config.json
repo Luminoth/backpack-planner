@@ -1,0 +1,7 @@
+{
+  "name": "backpack-planner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
