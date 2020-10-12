@@ -3,24 +3,73 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-list-header>Backpacking Planner</ion-list-header>
 
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 0" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 0">
+              <ion-label>Personal Information</ion-label>
             </ion-item>
           </ion-menu-toggle>
-        </ion-list>
 
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
+          <ion-item-divider></ion-item-divider>
 
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 1" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 1">
+              <ion-label>Gear Items</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 2" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 2">
+              <ion-label>Gear Systems</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 3" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 3">
+              <ion-label>Gear Collections</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item-divider></ion-item-divider>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 4" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 4">
+              <ion-label>Meals</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item-divider></ion-item-divider>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 5" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 5">
+              <ion-label>Trip Plans</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-item-divider></ion-item-divider>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 6" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 6">
+              <ion-icon slot="start" ios="settings-outline" md="settings-sharp">settings</ion-icon>
+              <ion-label>Settings</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle auto-hide="false">
+            <ion-item (click)="selectedIndex = 7" routerDirection="root" [routerLink]="['folder/Inbox']" lines="none"
+              detail="false" [class.selected]="selectedIndex == 7">
+              <ion-icon slot="start" ios="help-outline" md="help-sharp">help</ion-icon>
+              <ion-label>Help</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>
